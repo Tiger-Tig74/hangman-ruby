@@ -8,7 +8,6 @@ class Hangman
   def initialize(game_data = nil)
     @dictionary = File.readlines('google-10000-english-no-swears.txt').map(&:chomp)
     if game_data
-      p game_data
       @guessed_letters = game_data[:guessed_letters]
       @secret_word = game_data[:secret_word]
       @incorrect_guesses = game_data[:incorrect_guesses]
